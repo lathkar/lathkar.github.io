@@ -1,0 +1,135 @@
+/* Malhar Lathkar — GitHub Pages */
+
+:root {
+  --navy: #0f2027;
+  --cyan: #20b8e6;
+  --orange: #f7931e;
+  --text: #263238;
+  --muted: #607078;
+  --line: #dce5e8;
+  --surface-alt: #f5f8f9;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+.site {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero { margin: 24px 0 36px; }
+.hero img { display: block; width: 100%; height: auto; }
+
+.section {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1, h2 { color: var(--navy); line-height: 1.25; }
+h1 { margin: 0 0 18px; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h2 { margin: 0 0 24px; text-align: center; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.intro p { margin: 8px 0; font-size: 1.05rem; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.badge span { font-weight: 500; opacity: .92; }
+.badge:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 5px 14px rgba(15,32,39,.16); }
+.linkedin { background: #0a66c2; }
+.email { background: #ea4335; }
+.website { background: #2ea44f; }
+.scholar { background: #4285f4; }
+.orcid { background: #a6ce39; color: #173100; }
+.orcid:hover { color: #173100; }
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  align-items: end;
+  justify-items: center;
+}
+.book-grid a { display: block; width: 100%; text-align: center; transition: transform .18s ease; }
+.book-grid a:hover { transform: translateY(-6px); }
+.book-grid img {
+  display: block;
+  width: min(100%, 175px);
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(15,32,39,.14);
+}
+
+.training-section {
+  background: var(--surface-alt);
+  margin-left: calc((1120px - 100vw) / 2);
+  margin-right: calc((1120px - 100vw) / 2);
+  padding-left: max(20px, calc((100vw - 1120px) / 2));
+  padding-right: max(20px, calc((100vw - 1120px) / 2));
+}
+
+.training-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.stat {
+  text-align: center;
+  padding: 22px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.stat strong { display: block; color: var(--orange); font-size: 2rem; line-height: 1.1; }
+.stat span { display: block; margin-top: 7px; font-weight: 800; color: var(--navy); }
+.stat small { display: block; margin-top: 4px; color: var(--muted); }
+
+.tech-list, .contact ul { max-width: 760px; margin: 0 auto; padding-left: 1.4rem; }
+.tech-list li, .contact li { margin: 7px 0; }
+
+a { color: #087ea4; }
+a:hover { color: #05566f; }
+
+footer { padding: 30px 0 45px; text-align: center; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 800px) {
+  .book-grid { grid-template-columns: repeat(3, 1fr); }
+  .training-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .site { width: min(100% - 24px, 1120px); }
+  .hero { margin-top: 12px; }
+  .section { padding: 24px 0; }
+  .links { flex-direction: column; align-items: stretch; }
+  .badge { justify-content: center; }
+  .book-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .training-grid { grid-template-columns: 1fr; }
+}
